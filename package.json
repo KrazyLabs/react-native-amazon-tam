@@ -1,0 +1,28 @@
+{
+  "name": "react-native-amazon-tam",
+  "version": "1.0.0",
+  "description": "React Native wrapper around the Amazon Transparent Ad Marketplace SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "amazon",
+    "a9",
+    "tam",
+    "transparent ad marketplace",
+    "amazon publisher services"
+  ],
+  "author": "KrazyLabs",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2",
+    "react-native-windows": "0.41.0-rc.1"
+  },
+  "bugs": "https://github.com/KrazyLabs/react-native-amazon-tam/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KrazyLabs/react-native-amazon-tam"
+  }
+}
