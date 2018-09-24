@@ -1,5 +1,5 @@
 
-package com.reactlibrary;
+package com.krazylabsrnamazontam;
 
 import android.os.Bundle;
 import android.util.Log;
