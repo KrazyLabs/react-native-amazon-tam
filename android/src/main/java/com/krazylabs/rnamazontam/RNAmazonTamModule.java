@@ -1,5 +1,5 @@
 
-package com.krazylabsrnamazontam;
+package com.krazylabs.rnamazontam;
 
 import android.os.Bundle;
 import android.util.Log;

@@ -26,7 +26,7 @@ It's important that you save the Amazon iOS SDK to `[your project's name]/ios/Fr
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
 
-- Add `import com.reactlibrary.RNAmazonTamPackage;` to the imports at the top of the file
+- Add `import com.krazylabs.rnamazontam.RNAmazonTamPackage;` to the imports at the top of the file
 - Add `new RNAmazonTamPackage()` to the list returned by the `getPackages()` method
 
 2. Append the following lines to `android/settings.gradle`:

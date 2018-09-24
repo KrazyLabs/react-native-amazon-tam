@@ -1,5 +1,5 @@
 
-package com.krazylabsrnamazontam;
+package com.krazylabs.rnamazontam;
 
 import java.util.Arrays;
 import java.util.Collections;
