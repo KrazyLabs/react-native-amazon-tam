@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNAmazonTam.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAmazonTam.m */; };
+		EC755CD5215FDAEC0031DDEE /* RNAmazonTAMBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = EC755CD1215FDAEC0031DDEE /* RNAmazonTAMBanner.m */; };
+		EC755CD6215FDAEC0031DDEE /* RNAmazonTAMInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = EC755CD4215FDAEC0031DDEE /* RNAmazonTAMInterstitial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B3E7B5881CC2AC0600A0062D /* RNAmazonTam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAmazonTam.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNAmazonTam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAmazonTam.m; sourceTree = "<group>"; };
-		EC235810215540EE006E0AD8 /* libRNAmazonTam.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRNAmazonTam.a; path = "/Users/michaelmerrill/Code/react-native-amazon-tam/ios/build/Debug-iphoneos/libRNAmazonTam.a"; sourceTree = "<absolute>"; };
+		EC755CD0215FDAC30031DDEE /* libRNAmazonTAM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAmazonTAM.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC755CD1215FDAEC0031DDEE /* RNAmazonTAMBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAmazonTAMBanner.m; sourceTree = "<group>"; };
+		EC755CD2215FDAEC0031DDEE /* RNAmazonTAMInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAmazonTAMInterstitial.h; sourceTree = "<group>"; };
+		EC755CD3215FDAEC0031DDEE /* RNAmazonTAMBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAmazonTAMBanner.h; sourceTree = "<group>"; };
+		EC755CD4215FDAEC0031DDEE /* RNAmazonTAMInterstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAmazonTAMInterstitial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +45,20 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* RNAmazonTam.h */,
-				B3E7B5891CC2AC0600A0062D /* RNAmazonTam.m */,
+				EC755CD3215FDAEC0031DDEE /* RNAmazonTAMBanner.h */,
+				EC755CD1215FDAEC0031DDEE /* RNAmazonTAMBanner.m */,
+				EC755CD2215FDAEC0031DDEE /* RNAmazonTAMInterstitial.h */,
+				EC755CD4215FDAEC0031DDEE /* RNAmazonTAMInterstitial.m */,
+				EC755CD0215FDAC30031DDEE /* libRNAmazonTAM.a */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* RNAmazonTam */ = {
+		58B511DA1A9E6C8500147676 /* RNAmazonTAM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAmazonTam" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAmazonTAM" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -62,9 +68,9 @@
 			);
 			dependencies = (
 			);
-			name = RNAmazonTam;
+			name = RNAmazonTAM;
 			productName = RCTDataManager;
-			productReference = EC235810215540EE006E0AD8 /* libRNAmazonTam.a */;
+			productReference = EC755CD0215FDAC30031DDEE /* libRNAmazonTAM.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -81,7 +87,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNAmazonTam" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNAmazonTAM" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -93,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* RNAmazonTam */,
+				58B511DA1A9E6C8500147676 /* RNAmazonTAM */,
 			);
 		};
 /* End PBXProject section */
@@ -103,7 +109,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RNAmazonTam.m in Sources */,
+				EC755CD5215FDAEC0031DDEE /* RNAmazonTAMBanner.m in Sources */,
+				EC755CD6215FDAEC0031DDEE /* RNAmazonTAMInterstitial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +214,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNAmazonTam;
+				PRODUCT_NAME = RNAmazonTAM;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -228,7 +235,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNAmazonTam;
+				PRODUCT_NAME = RNAmazonTAM;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -236,7 +243,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNAmazonTam" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNAmazonTAM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -245,7 +252,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAmazonTam" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAmazonTAM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,

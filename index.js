@@ -1,7 +1,6 @@
 import { NativeModules } from 'react-native';
 
-const { AmazonTam } = NativeModules;
+export default { AmazonTAMBanner, AmazonTAMInterstitial } = NativeModules;
 
-export const { requestBannerAd, requestInterstitialAd } = AmazonTam;
-
-export default AmazonTam;
+export const { requestBannerAd } = AmazonTAMBanner;
+export const { requestInterstitialAd } = AmazonTAMInterstitial;

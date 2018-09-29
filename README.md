@@ -18,16 +18,16 @@ It's important that you save the Amazon iOS SDK to `[your project's name]/ios/Fr
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-amazon-tam` and add `RNAmazonTam.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNAmazonTam.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+2. Go to `node_modules` ➜ `react-native-amazon-tam` and add `RNAmazonTAM.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNAmazonTAM.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
 
-- Add `import com.krazylabs.rnamazontam.RNAmazonTamPackage;` to the imports at the top of the file
-- Add `new RNAmazonTamPackage()` to the list returned by the `getPackages()` method
+- Add `import com.krazylabs.rnamazontam.RNAmazonTAMPackage;` to the imports at the top of the file
+- Add `new RNAmazonTAMPackage()` to the list returned by the `getPackages()` method
 
 2. Append the following lines to `android/settings.gradle`:
    ```

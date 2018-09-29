@@ -7,7 +7,7 @@
 
 #import <DTBiOSSDK/DTBiOSSDK.h>
 
-@interface RNAmazonTam : NSObject <RCTBridgeModule, DTBAdCallback>
+@interface RNAmazonTAMBanner : NSObject <RCTBridgeModule, DTBAdCallback>
 
 @end
   

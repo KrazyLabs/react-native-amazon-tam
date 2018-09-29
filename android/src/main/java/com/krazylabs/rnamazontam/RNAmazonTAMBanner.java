@@ -1,4 +1,3 @@
-
 package com.krazylabs.rnamazontam;
 
 import android.os.Bundle;
@@ -18,24 +17,18 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 
-public class RNAmazonTamModule extends ReactContextBaseJavaModule {
-
-  private static final String AMZN_B = "amzn_b";
-  private static final String AMZN_H = "amzn_h";
-  private static final String DC = "dc";
-  private static final String AMZNNP = "amznp";
-  private static final String AMZNSLOTS = "amznslots";
+public class RNAmazonTAMBanner extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNAmazonTamModule(ReactApplicationContext reactContext) {
+  public RNAmazonTAMBanner(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
 
   @Override
   public String getName() {
-    return "AmazonTam";
+    return "AmazonTAMBanner";
   }
 
   @ReactMethod
@@ -59,19 +52,8 @@ public class RNAmazonTamModule extends ReactContextBaseJavaModule {
 
       @Override
       public void onSuccess(DTBAdResponse dtbAdResponse) {
-        final PublisherAdRequest adRequest = DTBAdUtil.INSTANCE.createPublisherAdRequestBuilder(dtbAdResponse).build();
-
-        Bundle customTargeting = adRequest.getCustomTargeting();
-
-        WritableMap map = Arguments.createMap();
-
-        map.putString(AMZN_B, customTargeting.getString(AMZN_B));
-        map.putString(AMZN_H, customTargeting.getString(AMZN_H));
-        map.putString(DC, customTargeting.getString(DC));
-        map.putString(AMZNNP, customTargeting.getString(AMZNNP));
-        map.putString(AMZNSLOTS, customTargeting.getString(AMZNSLOTS));
-
-        promise.resolve(map);
+        WritableMap customTargeting = RNAmazonTAMUtils.getCustomTargeting(dtbAdResponse);
+        promise.resolve(customTargeting);
       }
     });
   }

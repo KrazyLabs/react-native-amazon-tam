@@ -1,36 +1,20 @@
 #import <Foundation/Foundation.h>
-#import "RNAmazonTam.h"
+#import "RNAmazonTAMInterstitial.h"
 
-@interface RNAmazonTam ()
+@interface RNAmazonTAMInterstitial ()
 
 @property (nonatomic, strong) RCTPromiseResolveBlock resolve;
 @property (nonatomic, strong) RCTPromiseRejectBlock reject;
 
 @end
 
-@implementation RNAmazonTam
+@implementation RNAmazonTAMInterstitial
 
-RCT_EXPORT_MODULE(AmazonTam);
+RCT_EXPORT_MODULE(AmazonTAMInterstitial);
 
 - (dispatch_queue_t)methodQueue
 {
   return dispatch_get_main_queue();
-}
-
-#pragma mark - Banner Ad
-RCT_REMAP_METHOD(requestBannerAd,
-                 width:(int)width
-                 height:(int)height
-                 slotUUID:(NSString *)slotUUID
-                 resolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
-{
-  _resolve = resolve;
-  _reject = reject;
-  DTBAdSize *size = [[DTBAdSize alloc] initBannerAdSizeWithWidth:width height:height andSlotUUID:slotUUID];
-  DTBAdLoader *adLoader = [DTBAdLoader new];
-  [adLoader setSizes:size, nil];
-  [adLoader loadAd:self];
 }
 
 #pragma mark - Interstitial Ad
@@ -50,7 +34,7 @@ RCT_REMAP_METHOD(requestInterstitialAd,
 #pragma mark - DTBAdCallback
 - (void)onFailure: (DTBAdError)error {
   NSString *message = @"Failed to load ad :(";
-  NSError *errorResponse = [[NSError alloc] initWithDomain:@"RNAmazonTam" code:error userInfo:@{NSLocalizedDescriptionKey: message}];
+  NSError *errorResponse = [[NSError alloc] initWithDomain:@"RNAmazonTAMInterstitial" code:error userInfo:@{NSLocalizedDescriptionKey: message}];
   _reject(@"FAILED_TO_LOAD", message, errorResponse );
 }
 
