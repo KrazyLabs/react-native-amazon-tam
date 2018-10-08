@@ -37,11 +37,17 @@ RCT_REMAP_METHOD(requestBannerAd,
 - (void)onFailure: (DTBAdError)error {
   NSString *message = @"Failed to load ad :(";
   NSError *errorResponse = [[NSError alloc] initWithDomain:@"RNAmazonTAMBanner" code:error userInfo:@{NSLocalizedDescriptionKey: message}];
-  _reject(@"FAILED_TO_LOAD", message, errorResponse );
+  if (_reject) {
+    _reject(@"FAILED_TO_LOAD", message, errorResponse );
+    _reject = nil;
+  }
 }
 
 - (void)onSuccess: (DTBAdResponse *)adResponse {
-  _resolve(adResponse.customTargetting);
+  if (_resolve) {
+    _resolve(adResponse.customTargetting);
+    _resolve = nil;
+  }
 }
 
 @end
