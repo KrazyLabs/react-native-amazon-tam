@@ -35,7 +35,7 @@ RCT_REMAP_METHOD(requestBannerAd,
 
 #pragma mark - DTBAdCallback
 - (void)onFailure: (DTBAdError)error {
-  NSString *message = @"Failed to load ad :(";
+  NSString *message = @"Failed to load banner ad from Amazon.";
   NSError *errorResponse = [[NSError alloc] initWithDomain:@"RNAmazonTAMBanner" code:error userInfo:@{NSLocalizedDescriptionKey: message}];
   if (_reject) {
     _reject(@"FAILED_TO_LOAD", message, errorResponse );

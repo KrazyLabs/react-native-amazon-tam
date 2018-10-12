@@ -32,11 +32,7 @@ public class RNAmazonTAMBanner extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void requestBannerAd(
-          int width,
-          int height,
-          String slotUUID,
-          final Promise promise) {
+  public void requestBannerAd(int width, int height, String slotUUID, final Promise promise) {
 
     final DTBAdRequest loader = new DTBAdRequest();
     loader.setSizes(new DTBAdSize(width, height, slotUUID));
@@ -45,7 +41,7 @@ public class RNAmazonTAMBanner extends ReactContextBaseJavaModule {
       @Override
       public void onFailure(AdError adError) {
         String code = adError.getCode().toString();
-        String message = "Oops banner ad load has failed: " + adError.getMessage();
+        String message = "Failed to load banner ad from Amazon: " + adError.getMessage();
         Log.e(code, message);
         promise.reject(code, message);
       }

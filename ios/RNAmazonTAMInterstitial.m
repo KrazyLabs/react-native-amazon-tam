@@ -33,7 +33,7 @@ RCT_REMAP_METHOD(requestInterstitialAd,
 
 #pragma mark - DTBAdCallback
 - (void)onFailure: (DTBAdError)error {
-  NSString *message = @"Failed to load ad :(";
+  NSString *message = @"Failed to load interstitial ad from Amazon.";
   NSError *errorResponse = [[NSError alloc] initWithDomain:@"RNAmazonTAMInterstitial" code:error userInfo:@{NSLocalizedDescriptionKey: message}];
   if (_reject) {
     _reject(@"FAILED_TO_LOAD", message, errorResponse );

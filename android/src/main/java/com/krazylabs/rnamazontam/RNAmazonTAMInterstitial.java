@@ -17,7 +17,6 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 
-
 public class RNAmazonTAMInterstitial extends ReactContextBaseJavaModule {
   private final ReactApplicationContext reactContext;
 
@@ -36,19 +35,19 @@ public class RNAmazonTAMInterstitial extends ReactContextBaseJavaModule {
     final DTBAdRequest adLoader = new DTBAdRequest();
     adLoader.setSizes(new DTBAdSize.DTBInterstitialAdSize(slotUUID));
     adLoader.loadAd(new DTBAdCallback() {
-        @Override
-        public void onFailure(AdError adError) {
-          String code = adError.getCode().toString();
-          String message = "Failed to get the interstitial ad from Amazon: " + adError.getMessage();
-          Log.e(code, message);
-          promise.reject(code, message);
-        }
-    
-        @Override
-        public void onSuccess(DTBAdResponse dtbAdResponse) {
-          WritableMap customTargeting = RNAmazonTAMUtils.getCustomTargeting(dtbAdResponse);
-          promise.resolve(customTargeting);
-        }
+      @Override
+      public void onFailure(AdError adError) {
+        String code = adError.getCode().toString();
+        String message = "Failed to load interstitial ad from Amazon: " + adError.getMessage();
+        Log.e(code, message);
+        promise.reject(code, message);
+      }
+
+      @Override
+      public void onSuccess(DTBAdResponse dtbAdResponse) {
+        WritableMap customTargeting = RNAmazonTAMUtils.getCustomTargeting(dtbAdResponse);
+        promise.resolve(customTargeting);
+      }
     });
   }
 }
