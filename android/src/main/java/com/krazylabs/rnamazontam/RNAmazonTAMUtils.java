@@ -1,19 +1,10 @@
 package com.krazylabs.rnamazontam;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import com.amazon.device.ads.AdError;
-import com.amazon.device.ads.DTBAdCallback;
-import com.amazon.device.ads.DTBAdRequest;
 import com.amazon.device.ads.DTBAdResponse;
-import com.amazon.device.ads.DTBAdSize;
 import com.amazon.device.ads.DTBAdUtil;
 import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.Promise;
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 
