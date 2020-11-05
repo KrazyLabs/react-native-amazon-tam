@@ -1,6 +1,6 @@
 {
   "name": "@krazylabs/react-native-amazon-tam",
-  "version": "2.62.2",
+  "version": "2.63.3",
   "description": "React Native wrapper around the Amazon Transparent Ad Marketplace SDK",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/KrazyLabs/react-native-amazon-tam",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.62.2"
+    "react-native": "^0.63.3"
   },
   "bugs": "https://github.com/KrazyLabs/react-native-amazon-tam/issues",
   "repository": {
