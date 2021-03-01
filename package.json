@@ -1,6 +1,6 @@
 {
   "name": "@krazylabs/react-native-amazon-tam",
-  "version": "2.63.3",
+  "version": "2.64.0",
   "description": "React Native wrapper around the Amazon Transparent Ad Marketplace SDK",
   "main": "index.js",
   "scripts": {
