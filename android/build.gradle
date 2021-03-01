@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:4.1.2'
     }
 }
 
@@ -39,6 +39,6 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    api 'com.amazon.android:aps-sdk:8.3.2@aar'
-    api 'com.google.android.gms:play-services-ads:19.3.0'
+    api 'com.amazon.android:aps-sdk:8.4.3@aar'
+    api 'com.google.android.gms:play-services-ads:19.7.0'
 }
