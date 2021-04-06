@@ -45,7 +45,7 @@ RCT_REMAP_METHOD(requestBannerAd,
 
 - (void)onSuccess: (DTBAdResponse *)adResponse {
   if (_resolve) {
-    _resolve(adResponse.customTargetting);
+    _resolve(adResponse.customTargeting);
     _resolve = nil;
   }
 }
