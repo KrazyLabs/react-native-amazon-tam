@@ -43,7 +43,7 @@ RCT_REMAP_METHOD(requestInterstitialAd,
 
 - (void)onSuccess: (DTBAdResponse *)adResponse {
   if (_resolve) {
-    _resolve(adResponse.customTargetting);
+    _resolve(adResponse.customTargeting);
     _resolve = nil;
   }
 }
